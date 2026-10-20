@@ -144,7 +144,7 @@ details p{color:var(--mute);margin-top:12px}
 .final .cta{justify-content:center;margin-top:36px}
 footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-size:14px}
 .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
-.fgrid h5{color:var(--text);font-size:14px;margin-bottom:12px}.fgrid a{display:block;padding:4px 0}.fgrid a:hover{color:var(--text)}
+.fgrid h5{color:var(--text);font-size:14px;margin-bottom:12px}.fgrid a{display:block;padding:4px 0}.fgrid a.logo{display:flex;gap:10px;padding:0}.fgrid a:hover{color:var(--text)}
 .copy{margin-top:40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 /* promo */
 .promo{display:block;background:var(--acc);color:#0a0a0b;text-align:center;font-weight:600;font-size:14px;padding:9px 16px;transition:background .2s}
@@ -158,6 +158,9 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 .spots-d{text-align:right;margin-bottom:20px}
 .spots-m{display:none;font-size:clamp(34px,10vw,48px);margin:18px 0 6px}
 @media (max-width:900px){.spots-d{display:none}.spots-m{display:block}}
+.about{border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:24px;padding:56px;background:var(--card)}
+.about p{font-size:clamp(17px,1.6vw,21px);color:#d4d4d8;max-width:860px;line-height:1.65}
+@media (max-width:600px){.about{padding:32px 24px}}
 /* reveal */
 .rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -173,7 +176,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 <a class="promo" href="#pricing"><span class="dot"></span>Only 3 spots remain, grab your site now!<u>See plans →</u></a>
 <nav><div class="wrap">
   <a class="logo" href="#"><i></i>Website Builder</a>
-  <div class="links"><a href="#how">How it works</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#addons">Add-ons</a><a href="#faq">FAQ</a></div>
+  <div class="links"><a href="#how">How it works</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#addons">Add-ons</a><a href="#about">About</a><a href="#faq">FAQ</a></div>
   <a class="btn p" href="#pricing">Start my site</a>
 </div></nav>
 
@@ -183,7 +186,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
     <h1 class="rv d1">Your website, <em>handled.</em></h1>
     <a class="spots spots-m rv d1" href="#pricing">Only 3 spots remain, grab your site now!</a>
     <p class="sub rv d2">We build it. We host it. We babysit it.</p>
-    <p class="lead rv d2">A custom, pro-designed site live in 14 days, then hosting, security, updates and edits for one flat monthly price. No dev bills. No plugin panic.</p>
+    <p class="lead rv d2">A custom, AI-built, human-reviewed site live in 14 days, then hosting, security, updates and edits for one flat monthly price. No dev bills. No plugin panic.</p>
     <div class="cta rv d3"><a class="btn p" href="#pricing">Start my site →</a><a class="btn g" href="#pricing">See plans</a></div>
     <div class="trust rv d4"><span class="stars">✓</span><span>Cancel anytime · Live in 14 days · From $129/mo</span></div>
   </div>
@@ -211,7 +214,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
   <h2 class="rv">Live in 14 days.<br>Three steps. Zero headaches.</h2>
   <div class="steps">
     <div class="card rv d1"><div class="num">01</div><h3>Tell us</h3><p>A 20-minute kickoff call and a short form. Send logos, photos, ideas. Or nothing, and we'll write the copy.</p><span class="day">Day 1</span></div>
-    <div class="card rv d2"><div class="num">02</div><h3>We build</h3><p>Our designers craft your custom site. You review a live preview and we refine it until you love it.</p><span class="day">Days 2–12</span></div>
+    <div class="card rv d2"><div class="num">02</div><h3>We build</h3><p>We build your custom site with AI tools, then a real person reviews and fine-tunes it. You review a live preview and we refine it until you love it.</p><span class="day">Days 2–12</span></div>
     <div class="card rv d3"><div class="num">03</div><h3>You grow</h3><p>We launch, host, secure and update it, and make your edits every month. Add upgrades whenever you're ready.</p><span class="day">Day 14 · Launch 🚀</span></div>
   </div>
   <div class="timeline rv"><div></div></div>
@@ -268,7 +271,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
   <p class="lead rv">Agency quality without the agency invoice. DIY prices without the DIY weekends.</p>
   <div class="tw rv"><table>
     <tr><th></th><th class="us">Website Builder</th><th>DIY builders</th><th>Agencies</th></tr>
-    <tr><td>Custom design by pros</td><td class="us">✓</td><td class="n">✕</td><td class="y">✓</td></tr>
+    <tr><td>Custom site, human-reviewed</td><td class="us">✓</td><td class="n">✕</td><td class="y">✓</td></tr>
     <tr><td>You do the work</td><td class="us">Never</td><td>Always</td><td>Sometimes</td></tr>
     <tr><td>Hosting, security &amp; updates</td><td class="us">Included</td><td>Partly</td><td>Extra retainer</td></tr>
     <tr><td>Monthly edits</td><td class="us">Included</td><td class="n">✕</td><td>Billed hourly</td></tr>
@@ -289,6 +292,11 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 
 <section style="padding-top:0"><div class="wrap">
   <div class="guar rv"><div class="seal">CANCEL<br>ANYTIME<br>★</div><div><h2>No contracts. No hostage-taking.</h2><p>Month-to-month on every plan. If we're not earning your business, cancel in two clicks. No fees, no fine print.</p></div></div>
+</div></section>
+
+<section id="about" style="padding-top:0"><div class="wrap">
+  <div class="about rv"><span class="tag">Who we are</span><h2>About us</h2>
+  <p>We're an AI-assisted website building team. We aren't traditional web designers or developers. We're problem solvers with decades of combined business experience at Fortune 100 companies, and we've learned to put AI tools to work planning, building, and launching good-looking, working websites for local businesses, fast and at a fair price. A real person reviews and fine-tunes every site before it goes live, and we're happy to walk you through how it was made.</p></div>
 </div></section>
 
 <section id="faq" style="padding-top:0"><div class="wrap">
@@ -314,9 +322,10 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
   <div class="fgrid">
     <div><a class="logo" href="#"><i></i>Website Builder</a><p style="margin-top:12px;max-width:280px">Your website, handled. We build it. We host it. We babysit it.</p></div>
     <div><h5>Product</h5><a href="#pricing">Pricing</a><a href="#addons">Add-ons</a><a href="#work">Work</a></div>
-    <div><h5>Company</h5><a href="#">About</a><a href="#">Contact</a><a href="#faq">FAQ</a></div>
+    <div><h5>Company</h5><a href="#about">About</a><a href="#">Contact</a><a href="#faq">FAQ</a></div>
     <div><h5>Legal</h5><a href="#">Terms</a><a href="#">Privacy</a></div>
   </div>
+  <p class="disc" style="margin-top:32px;max-width:760px">Built with AI assistance by business problem solvers with Fortune 100 experience, not a traditional web design agency.</p>
   <div class="copy"><span>© 2026 Website Builder. Sample mockup.</span><span>Made with care, maintained forever.</span></div>
 </div></footer>
 
