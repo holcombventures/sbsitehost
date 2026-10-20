@@ -146,6 +146,16 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:32px}
 .fgrid h5{color:var(--text);font-size:14px;margin-bottom:12px}.fgrid a{display:block;padding:4px 0}.fgrid a:hover{color:var(--text)}
 .copy{margin-top:40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* promo */
+.promo{display:block;background:var(--acc);color:#0a0a0b;text-align:center;font-weight:600;font-size:14px;padding:9px 16px;transition:background .2s}
+.promo:hover{background:#d8ff70}
+.promo .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#0a0a0b;margin-right:10px;vertical-align:middle;animation:pulse 1.4s ease-in-out infinite}
+.promo u{margin-left:8px;text-underline-offset:3px}
+@keyframes pulse{50%{opacity:.25}}
+.hpill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(198,255,61,.45);background:rgba(198,255,61,.08);color:var(--acc);font-size:14px;font-weight:600;padding:7px 14px;border-radius:99px;margin-bottom:22px;transition:.2s}
+.hpill:hover{background:rgba(198,255,61,.16)}
+.hpill .dot{width:8px;height:8px;border-radius:50%;background:var(--acc);animation:pulse 1.4s ease-in-out infinite}
+@media (max-width:600px){.promo{font-size:13px}.promo u{display:none}.hpill{font-size:13px}}
 /* reveal */
 .rv{opacity:0;transform:translateY(40px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .rv.in{opacity:1;transform:none}
@@ -158,6 +168,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 </style>
 </head>
 <body>
+<a class="promo" href="#pricing"><span class="dot"></span>Only 3 spots remain, grab your site now!<u>See plans →</u></a>
 <nav><div class="wrap">
   <a class="logo" href="#"><i></i>Website Builder</a>
   <div class="links"><a href="#how">How it works</a><a href="#work">Work</a><a href="#pricing">Pricing</a><a href="#addons">Add-ons</a><a href="#faq">FAQ</a></div>
@@ -166,6 +177,7 @@ footer{border-top:1px solid var(--line);padding:48px 0;color:var(--mute);font-si
 
 <header class="hero"><div class="wrap hgrid">
   <div>
+    <a class="hpill rv" href="#pricing"><span class="dot"></span>Only 3 spots remain, grab your site now!</a><br>
     <span class="tag rv">Website as a subscription</span>
     <h1 class="rv d1">Your website, <em>handled.</em></h1>
     <p class="sub rv d2">We build it. We host it. We babysit it.</p>
