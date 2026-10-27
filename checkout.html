@@ -36,17 +36,19 @@ ul{list-style:none;margin-top:18px}li{padding:8px 0;border-bottom:1px solid var(
 <div class="grid">
  <div class="card sel"><h2 id="pt">Classic</h2><div class="d" id="pd"></div><div class="amt"><span id="pp"></span><small>/mo</small></div><div id="ps" style="color:var(--mute);font-size:14px;margin-top:2px"></div><ul id="pf"></ul>
   <div class="sw">Switch plan: <a href="?plan=basic" data-k="basic">Basic</a><a href="?plan=classic" data-k="classic">Classic</a><a href="?plan=vip" data-k="vip">VIP</a></div></div>
- <div class="card"><span class="soon">COMING SOON</span><h3>Checkout coming soon — payments launching shortly.</h3>
-  <p>Want to lock in one of the remaining spots now? Email us and we'll reserve your spot and get your build started.</p>
-  <a class="btn" id="mail" href="mailto:hello@sbsitehost.com">Email hello@sbsitehost.com</a><a class="btn g" href="index.html#pricing">Compare plans</a>
-  <p style="font-size:13px;margin:14px 0 0">No contracts. Cancel anytime.</p></div>
+ <div class="card"><span class="soon">SECURE CHECKOUT</span><h3>Ready when you are.</h3>
+  <p>You'll pay your first month plus the one-time setup fee on Stripe's secure checkout. Your build starts right after.</p>
+  <a class="btn" id="buy" href="https://buy.stripe.com/8x228q6jtcQX6vF8OU3ZK01">Continue to secure checkout →</a><a class="btn g" id="mail" href="mailto:hello@sbsitehost.com">Questions? Email us</a>
+  <p style="font-size:13px;margin:14px 0 0">Payments by Stripe. No contracts. Cancel anytime.</p></div>
 </div></div></main>
+<footer style="border-top:1px solid var(--line);padding:24px 0;color:var(--mute);font-size:14px"><div class="wrap" style="display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between"><span>© 2026 SB Site Host.</span><span><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="refunds.html">Refunds</a></span></div></footer>
 <script>
+const L={basic:'https://buy.stripe.com/7sY14mdLV7wDdY7ghm3ZK00',classic:'https://buy.stripe.com/8x228q6jtcQX6vF8OU3ZK01',vip:'https://buy.stripe.com/4gMbJ07nx8AH8DN3uA3ZK02'};
 const P={basic:{n:'Basic',d:'Get found on Google and in AI answers',p:99,s:49,f:['Custom website built for your business','Optimized for regular search','Optimized for AI search (ChatGPT, Gemini & more)','Google Business Profile setup','Hosting, SSL, security & updates','Monthly content edits']},
 classic:{n:'Classic',d:'Basic plus tools that win you customers',p:199,s:99,f:['Everything in Basic','AI chatbot that answers & captures leads 24/7','Instant price-quote tool','Online booking or lead forms','More pages & edit time','Priority support']},
 vip:{n:'VIP',d:'Full service, fully tracked',p:499,s:199,f:['Everything in Classic','Call tracking numbers','Lead tracking dashboard','Monthly analytics report','Ongoing SEO & conversion tuning','Dedicated account manager']}};
 let k=(new URLSearchParams(location.search).get('plan')||'classic').toLowerCase();if(!P[k])k='classic';const x=P[k];
 pn.textContent=pt.textContent=x.n;pd.textContent=x.d;pp.textContent='$'+x.p;ps.textContent='+ $'+x.s+' one-time setup';pf.innerHTML=x.f.map(t=>'<li></li>').join('');[...pf.children].forEach((l,i)=>l.textContent=x.f[i]);
 document.querySelector('.sw a[data-k="'+k+'"]').classList.add('on');document.title='Checkout: '+x.n+' | SB Site Host';
-mail.href='mailto:hello@sbsitehost.com?subject='+encodeURIComponent('Sign me up: '+x.n+' plan ($'+x.p+'/mo + $'+x.s+' setup)');
+buy.href=L[k];mail.href='mailto:hello@sbsitehost.com?subject='+encodeURIComponent('Question about the '+x.n+' plan ($'+x.p+'/mo + $'+x.s+' setup)');
 </script></body></html>
